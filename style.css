@@ -1,0 +1,295 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #222;
+  background: #f8f9fa;
+}
+
+a { color: #0066cc; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== 広告表示 ===== */
+.ad-disclosure {
+  background: #fff3cd;
+  border-bottom: 1px solid #ffc107;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: #555;
+}
+.ad-disclosure span {
+  display: inline-block;
+  background: #ffc107;
+  color: #333;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-right: 8px;
+}
+
+/* ===== Hero ===== */
+.hero {
+  background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #0d47a1 100%);
+  color: #fff;
+  padding: 60px 0 50px;
+  text-align: center;
+}
+.hero-label {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+  margin-bottom: 12px;
+  background: rgba(255,255,255,0.15);
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+.hero h1 {
+  font-size: clamp(24px, 5vw, 36px);
+  font-weight: 900;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.hero-sub {
+  font-size: 15px;
+  opacity: 0.9;
+  margin-bottom: 32px;
+}
+.risk-note {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: 12px;
+}
+.risk-note a { color: rgba(255,255,255,0.8); text-decoration: underline; }
+
+/* ===== Button ===== */
+.btn-main {
+  display: inline-block;
+  background: #ff6600;
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 16px 40px;
+  border-radius: 50px;
+  text-decoration: none !important;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 4px 16px rgba(255,102,0,0.4);
+}
+.btn-main:hover {
+  background: #e55a00;
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+/* ===== Main sections ===== */
+main { padding: 40px 0 60px; }
+
+section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 36px 32px;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+section h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1a237e;
+  border-left: 5px solid #ff6600;
+  padding-left: 14px;
+  margin-bottom: 20px;
+}
+
+section h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 24px 0 10px;
+  color: #333;
+}
+
+section p { margin-bottom: 14px; color: #444; }
+
+section ul, section ol {
+  padding-left: 24px;
+  margin-bottom: 14px;
+}
+section li { margin-bottom: 8px; color: #444; }
+
+/* ===== 目次 ===== */
+.toc {
+  background: #f0f4ff;
+  border: 1px solid #c5cae9;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 28px;
+}
+.toc-title {
+  font-weight: bold;
+  font-size: 14px;
+  color: #1a237e;
+  margin-bottom: 10px;
+}
+.toc ol { margin: 0; padding-left: 20px; }
+.toc li { font-size: 14px; margin-bottom: 6px; }
+.toc a { color: #1a237e; }
+
+/* ===== 特典カード ===== */
+.benefit-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0;
+}
+@media (max-width: 540px) {
+  .benefit-cards { grid-template-columns: 1fr; }
+}
+.benefit-card {
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+.benefit-card.highlight {
+  border-color: #ff6600;
+  background: #fff8f4;
+}
+.benefit-num {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ff6600;
+  margin-bottom: 6px;
+}
+.benefit-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1a237e;
+  margin-bottom: 8px;
+}
+.benefit-desc { font-size: 14px; color: #555; margin: 0; }
+
+/* ===== 注意ボックス ===== */
+.caution-box {
+  background: #fff3e0;
+  border-left: 4px solid #ff9800;
+  padding: 14px 16px;
+  border-radius: 0 8px 8px 0;
+  font-size: 14px;
+  color: #555;
+  margin: 16px 0;
+}
+
+.note-box {
+  background: #f5f5f5;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #777;
+  margin: 12px 0;
+}
+
+/* ===== 5つの特徴 ===== */
+.feature-list { display: flex; flex-direction: column; gap: 16px; }
+.feature-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+.feature-num {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: #1a237e;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+.feature-item h3 { margin: 0 0 6px; font-size: 16px; }
+.feature-item p { margin: 0; font-size: 14px; color: #555; }
+
+/* ===== ステップ ===== */
+.steps { display: flex; flex-direction: column; align-items: center; gap: 4px; margin: 24px 0; }
+.step {
+  width: 100%;
+  background: #f0f4ff;
+  border: 2px solid #c5cae9;
+  border-radius: 10px;
+  padding: 18px 20px;
+  text-align: center;
+}
+.step-num {
+  display: inline-block;
+  background: #1a237e;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+.step p { font-weight: 700; font-size: 17px; margin: 6px 0 4px; color: #1a237e; }
+.step small { font-size: 13px; color: #666; }
+.step-arrow { font-size: 20px; color: #1a237e; line-height: 1; }
+
+/* ===== 注意リスト ===== */
+.caution-list { list-style: none; padding: 0; }
+.caution-list li {
+  padding: 8px 8px 8px 28px;
+  position: relative;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+}
+.caution-list li::before {
+  content: "×";
+  position: absolute;
+  left: 6px;
+  color: #e53935;
+  font-weight: bold;
+}
+
+/* ===== CTA Section ===== */
+.cta-section {
+  text-align: center;
+  margin: 32px 0 8px;
+}
+.cta-section .risk-note {
+  font-size: 12px;
+  color: #888;
+  margin-top: 10px;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #1a237e;
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  padding: 32px 20px;
+  font-size: 13px;
+  line-height: 2;
+}
+footer a { color: rgba(255,255,255,0.8); text-decoration: underline; }
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+  section { padding: 24px 18px; }
+  .hero { padding: 40px 0 36px; }
+  .btn-main { font-size: 15px; padding: 14px 28px; }
+}
